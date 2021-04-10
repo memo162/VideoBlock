@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/services/http.service';
+import { Router } from '@angular/router';
 import { PeliculaService } from 'src/app/services/pelicula.service';
 import { Pelicula } from '../models/pelicula';
 
@@ -11,7 +11,9 @@ import { Pelicula } from '../models/pelicula';
 export class PeliculasComponent implements OnInit {
   public peliculas : Array<Pelicula>;
 
-  constructor(private peliculaService: PeliculaService) { }
+  constructor(
+    private peliculaService: PeliculaService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.peliculaService.peliculas$.subscribe((response) => {
@@ -22,4 +24,8 @@ export class PeliculasComponent implements OnInit {
     this.peliculaService.get();
   }
 
+  goToDetail(id:number) {
+    console.log('/', id);
+    this.router.navigate(['peliculas/detalle/', id]);
+  }
 }

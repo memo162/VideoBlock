@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PeliculaService } from 'src/app/services/pelicula.service';
+import { Pelicula } from '../../models/pelicula';
 
 @Component({
   selector: 'app-pelicula-detalle',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pelicula-detalle.component.css']
 })
 export class PeliculaDetalleComponent implements OnInit {
-
-  constructor() { }
+  public pelicula : Pelicula;
+  public idPelicula : string;
+  
+  constructor(
+    private peliculaService: PeliculaService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.idPelicula = this.route.snapshot.paramMap.get('id');
+
+    this.peliculaService.pelicula$.subscribe((response) => {
+      this.pelicula = response;
+      console.log(this.pelicula);
+    })
+
+    this.peliculaService.getById(parseInt(this.idPelicula));
   }
 
 }

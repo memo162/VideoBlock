@@ -1,0 +1,9 @@
+.card-pelicula {
+    border: 1px solid black;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.card-pelicula:hover {
+    background-color: lightblue;
+}

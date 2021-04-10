@@ -1,1 +1,4 @@
 <p>peliculas works!</p>
+<div (click)="goToDetail(pelicula.id)" class="card-pelicula" *ngFor="let pelicula of peliculas">
+    <span>{{pelicula.titulo}}</span>
+</div>
