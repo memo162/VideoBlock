@@ -8,6 +8,8 @@ import { HttpService } from "./http.service";
 export class PeliculaService {
     public peliculas = new BehaviorSubject<Array<Pelicula>>(new Array<Pelicula>());
     public peliculas$ = this.peliculas.asObservable(); 
+    public pelicula = new BehaviorSubject<Pelicula>(new Pelicula);
+    public pelicula$ = this.pelicula.asObservable();
 
     constructor (private httpServive: HttpService) {}
 
@@ -19,6 +21,12 @@ export class PeliculaService {
             else {
                 this.peliculas.next(new Array<Pelicula>());
             }
+        });
+    }
+
+    getById(id:number) {
+        this.httpServive.get(environment.VideoBlockAPI + 'pelicula/' + id).subscribe((requestResult) => {
+            this.pelicula.next(requestResult);
         });
     }
 }
