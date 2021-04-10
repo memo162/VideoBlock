@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { ReservasComponent } from './components/reservas/reservas.component';
 import { PeliculaDetalleComponent } from './components/peliculas/pelicula-detalle/pelicula-detalle.component';
+import { HttpService } from './services/http.service';
+import { PeliculaService } from './services/pelicula.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,13 @@ import { PeliculaDetalleComponent } from './components/peliculas/pelicula-detall
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    HttpService,
+    PeliculaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

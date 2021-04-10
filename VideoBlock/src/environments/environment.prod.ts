@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  VideoBlockAPI: 'https://localhost:44387/api/',
 };
