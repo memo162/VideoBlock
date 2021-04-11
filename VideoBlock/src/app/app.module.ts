@@ -9,8 +9,8 @@ import { PeliculaDetalleComponent } from './components/peliculas/pelicula-detall
 import { HttpService } from './services/http.service';
 import { PeliculaService } from './services/pelicula.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ReservaFromComponent } from './components/reservas/reserva-form/reserva-from/reserva-from.component';
 import { ReservaService } from './services/reserva.service';
+import { ReservaFromComponent } from './components/reservas/reserva-form/reserva-from.component';
 
 @NgModule({
   declarations: [

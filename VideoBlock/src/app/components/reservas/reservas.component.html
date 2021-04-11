@@ -1,1 +1,6 @@
 <p>reservas works!</p>
+<div class="card-pelicula" *ngFor="let reserva of reservas">
+    <span>{{reserva.id}}</span>
+    <span>{{reserva.usuario.nombre}}</span>
+    <span>{{reserva.pelicula.titulo}}</span>
+</div>
