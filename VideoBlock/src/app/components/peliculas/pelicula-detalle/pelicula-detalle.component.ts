@@ -8,6 +8,7 @@ import { Pelicula } from '../../models/pelicula';
   templateUrl: './pelicula-detalle.component.html',
   styleUrls: ['./pelicula-detalle.component.css']
 })
+
 export class PeliculaDetalleComponent implements OnInit {
   public pelicula : Pelicula;
   public idPelicula : string;
@@ -21,10 +22,8 @@ export class PeliculaDetalleComponent implements OnInit {
 
     this.peliculaService.pelicula$.subscribe((response) => {
       this.pelicula = response;
-      console.log(this.pelicula);
     })
 
     this.peliculaService.getById(parseInt(this.idPelicula));
   }
-
 }

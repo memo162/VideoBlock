@@ -18,14 +18,12 @@ export class PeliculasComponent implements OnInit {
   ngOnInit(): void {
     this.peliculaService.peliculas$.subscribe((response) => {
       this.peliculas = response;
-      console.log(this.peliculas);
     })
 
     this.peliculaService.get();
   }
 
   goToDetail(id:number) {
-    console.log('/', id);
     this.router.navigate(['peliculas/detalle/', id]);
   }
 }

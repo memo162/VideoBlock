@@ -5,5 +5,6 @@ export class Pelicula extends BaseModel {
     descripcion: string;
     director: string;
     costo: string;
-    cantidad: number;
+    cantidadInventario: number;
+    cantiddDisponible:number;
 }

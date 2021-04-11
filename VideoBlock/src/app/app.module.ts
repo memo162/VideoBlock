@@ -8,14 +8,17 @@ import { ReservasComponent } from './components/reservas/reservas.component';
 import { PeliculaDetalleComponent } from './components/peliculas/pelicula-detalle/pelicula-detalle.component';
 import { HttpService } from './services/http.service';
 import { PeliculaService } from './services/pelicula.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ReservaFromComponent } from './components/reservas/reserva-form/reserva-from/reserva-from.component';
+import { ReservaService } from './services/reserva.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeliculasComponent,
     ReservasComponent,
-    PeliculaDetalleComponent
+    PeliculaDetalleComponent,
+    ReservaFromComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     HttpService,
-    PeliculaService
+    PeliculaService,
+    ReservaService
   ],
   bootstrap: [AppComponent]
 })

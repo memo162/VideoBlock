@@ -1,0 +1,8 @@
+<p>reserva-from works!</p>
+<h1>{{pelicula.titulo}}</h1>
+<p>Recuerda que debes devolver la pelicula en los 
+   proximos dos dias o se te cobrara multa :)
+</p>
+<a [routerLink]="" (click)="createReserva()">Confirmar Reserva</a>
+
+<h1 *ngIf="reserva && reserva.id">RESEVA GUARDADA CON EXITO :)</h1>
