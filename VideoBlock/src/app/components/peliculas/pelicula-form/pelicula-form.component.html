@@ -1,0 +1,36 @@
+<p>pelicula-form works!</p>
+<form [formGroup]="peliculaForm">
+    <div>
+        <label for="titulo">
+            Titulo
+            <input type="text" id="titulo" formControlName="titulo">
+        </label>
+    </div>
+    <div>
+        <label for="descripcion">
+            Descripcion
+            <input type="text" id="descripcion" formControlName="descripcion">
+        </label>
+    </div>
+    <div>
+        <label for="titulo">
+            Director
+            <input type="text" id="director" formControlName="director">
+        </label>
+    </div>
+    <div>
+        <label for="titulo">
+            Costo
+            <input type="text" id="costo" formControlName="costo">
+        </label>
+    </div>
+    <div>
+        <label for="titulo">
+            CantidadInventario     
+            <input type="text" id="cantidadInventario" formControlName="cantidadInventario">
+        </label>
+    </div>
+    <div>
+        <input (click)="guardar()" type="button" value="Guardar">
+    </div>
+</form>

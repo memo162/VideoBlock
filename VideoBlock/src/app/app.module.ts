@@ -11,6 +11,8 @@ import { PeliculaService } from './services/pelicula.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReservaService } from './services/reserva.service';
 import { ReservaFromComponent } from './components/reservas/reserva-form/reserva-from.component';
+import { PeliculaFormComponent } from './components/peliculas/pelicula-form/pelicula-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,15 @@ import { ReservaFromComponent } from './components/reservas/reserva-form/reserva
     PeliculasComponent,
     ReservasComponent,
     PeliculaDetalleComponent,
-    ReservaFromComponent
+    ReservaFromComponent,
+    PeliculaFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     HttpService,

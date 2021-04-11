@@ -29,4 +29,16 @@ export class PeliculaService {
             this.pelicula.next(requestResult);
         });
     }
+
+    create(pelicula:Pelicula) {
+        this.httpServive.post(environment.VideoBlockAPI + 'pelicula/', pelicula).subscribe((response) => {
+            this.pelicula.next(response);
+        });
+    }
+
+    update(pelicula:Pelicula) {
+        this.httpServive.post(environment.VideoBlockAPI + 'pelicula/', pelicula).subscribe((response) => {
+            this.pelicula.next(response);
+        });
+    }
 }
