@@ -37,6 +37,6 @@ export class ReservaFromComponent implements OnInit {
     let reserva = new Reserva();
     reserva.peliculaId = this.pelicula.id;
     reserva.usuarioId = 1;
-    this.reservaService.createReserva(reserva);
+    this.reservaService.create(reserva);
   } 
 }

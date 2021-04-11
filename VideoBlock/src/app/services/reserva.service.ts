@@ -31,10 +31,15 @@ export class ReservaService {
         });
     }
 
-    createReserva(reserva:Reserva) {
+    create(reserva:Reserva) {
         this.httpServive.post(environment.VideoBlockAPI + 'reserva/', reserva).subscribe((response) => {
             this.reserva.next(response);
         });
+    }
 
+    update(reserva:Reserva) {
+        this.httpServive.post(environment.VideoBlockAPI + 'reserva/', reserva).subscribe((response) => {
+            this.reserva.next(response);
+        });
     }
 }

@@ -20,4 +20,14 @@ export class ReservasComponent implements OnInit {
 
       this.reservaService.get();
     }
+  
+    cerrar(reserva:Reserva) : void {
+      reserva.cerrada = true;
+      this.reservaService.update(reserva);
+    }
+
+    borrar(reserva:Reserva) : void {
+      reserva.eliminado = true;
+      this.reservaService.update(reserva);
+    }
 }

@@ -1,6 +1,10 @@
 <p>reservas works!</p>
-<div class="card-pelicula" *ngFor="let reserva of reservas">
+<div class="card-reserva" *ngFor="let reserva of reservas">
     <span>{{reserva.id}}</span>
     <span>{{reserva.usuario.nombre}}</span>
     <span>{{reserva.pelicula.titulo}}</span>
+    <span>{{reserva.cerrada}}</span>
+    <span>{{reserva.eliminado}}</span>
+    <a [routerLink]="" (click)="cerrar(reserva)">Cerrar</a>
+    <a [routerLink]="" (click)="borrar(reserva)">Borrar</a>
 </div>

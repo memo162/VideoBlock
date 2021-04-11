@@ -1,0 +1,8 @@
+.card-reserva {
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.card-reserva:hover {
+    background-color: lightblue;
+}
