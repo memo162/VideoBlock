@@ -13,6 +13,7 @@ import { ReservaService } from './services/reserva.service';
 import { ReservaFromComponent } from './components/reservas/reserva-form/reserva-from.component';
 import { PeliculaFormComponent } from './components/peliculas/pelicula-form/pelicula-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PeliculaAdminComponent } from './components/peliculas/pelicula-admin/pelicula-admin.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReservasComponent,
     PeliculaDetalleComponent,
     ReservaFromComponent,
-    PeliculaFormComponent
+    PeliculaFormComponent,
+    PeliculaAdminComponent
   ],
   imports: [
     BrowserModule,
